@@ -18,15 +18,17 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam commodi adipisci minus est iure nemo praesentium voluptate impedit quasi, unde omnis voluptates, magni culpa nobis temporibus numquam minima maiores enim!</p>
     
     <script>
-        var n1 = window.prompt('Digite um número: ')
-        var n2 = window.prompt ('Digite outro número: ')
+        var n1 = Number(window.prompt('Digite um número: ')) //n1 recebe o valor do prompt, que é uma string
+        var n2 = Number(window.prompt ('Digite outro número: ')) //n1 recebe o valor do prompt, que é uma string
         var s = n1 + n2
-        window.alert ('A soma dos dois números é igual a : ' + s)
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}.`)
 
         /*
         o sinal + funciona como somador quando é number + number
         o sinal + funciona como concatenador quando é strin + string
         */
+
+        // o Number.parseInt(window.prompt('...')) vai converte o dado recebido de string em number antes de armazená-lo na variável
     </script>
 </body>
 </html>
