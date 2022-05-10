@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaração de Nacionalidade</title>
+</head>
+<body>
+    <h1>Declaração de Nacionalidade</h1>
+
+    <p>Escreva o nome do país onde você nasceu e clique em VERIFICAR.</p>
+
+    <input type="text" name="txtp" id="txtp">
+
+    <input type="button" value="VERIFICAR" onclick="verificar()">
+
+    <div id="resposta">
+         
+    </div>
+    
+    <script>
+        function verificar() {
+            var txtp = document.getElementById("txtp")
+            var res = document.getElementById('resposta')
+            var p = txtp.value //texto precisa do .value pra ser armazenado
+
+            if (p == 'Brasil') {
+                res.innerHTML = `Você nasceu no ${p}, você é Brasileiro.`
+            } else {
+                res.innerHTML = `Você nasceu em ${p}, você é estrangeiro.`
+            }
+        }
+        
+
+    </script>
+</body>
+</html>
